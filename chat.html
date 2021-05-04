@@ -1,12 +1,13 @@
 <html>
     <body id="chat-container">
         <div>
+        send chat:
             <input id="message-field" type="text"> <button onclick="do_post()">&gt;</button>
         </div>
         <hr>
         <script type="text/javascript">
             'use strict';
-            var ws_url = `ws://${window.location.hostname}:${window.location.port}${window.location.pathname}ws/`;
+            var ws_url = `ws://${window.location.hostname}:${window.location.port}${window.location.pathname}ws`;
             var container = document.getElementById("chat-container");
             var socket = new WebSocket(ws_url);
             socket.onmessage = function (event) {

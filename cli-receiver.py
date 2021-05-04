@@ -4,7 +4,7 @@ import sys
 import aiohttp
 
 
-URL = 'http://localhost:8080/CLI/ws/'
+URL = 'http://localhost:8080/CLI/ws'
 
 async def client():
     async with aiohttp.ClientSession().ws_connect(URL) as ws:

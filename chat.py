@@ -43,7 +43,7 @@ async def snd(ws,x):
         await ws.send_json(x)
 
 
-@routes.get('/{name}/ws/')
+@routes.get('/{name}/ws')
 async def websocket(request):
     name = request.match_info['name']
     ws = web.WebSocketResponse()
